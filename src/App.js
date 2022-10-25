@@ -1,42 +1,24 @@
-import React from "react";
+import { Game } from "./game";
 import Phaser from "phaser";
 
 
 function App(){
   var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: 650,
+    height: 692,
+    scene:[Game],
     physics: {
         default: 'arcade',
         arcade: {
-  
+            gravity:{y:400},
+            debug: false
         }
-    },
-    scene: {
-        preload: preload,
-        create: create,
-        update : update
-
     }
-};
+
+  }
 
 var game = new Phaser.Game(config);
-
-function preload ()
-{
-this.load.spritesheet('snow_bros','assets/chars.png',)
-}
-
-function create ()
-{
-
-    
-
-}
-function update(){
-
-}
 
 }
 export default App;
