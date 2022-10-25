@@ -15,7 +15,6 @@ function App(){
             debug: false
         }
     }
-
   }
 
 var game = new Phaser.Game(config);
