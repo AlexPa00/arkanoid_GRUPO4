@@ -28,6 +28,7 @@ export class Game extends Phaser.Scene{
         this.add.image(325,346,'background');
         this.player =this.physics.add.image(325,650,'player').setImmovable();
         this.player.body.allowGravity = false;
+        this.player.setCollideWorldBounds(true);
 
     
 
@@ -48,7 +49,7 @@ export class Game extends Phaser.Scene{
     //
         this.ball =this.physics.add.image(325,75,'ball');
         this.physics.add.collider(this.ball,this.player);
-        this.ball.setBounce(1);
+        this.ball.setBounce(1,1);
         this.ball.setCollideWorldBounds(true);
         
     //  
