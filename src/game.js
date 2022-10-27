@@ -68,6 +68,7 @@ export class Game extends Phaser.Scene{
 
         brickImpact(ball, brick ) {
           brick.disableBody(true, true);
+         
 
           if (this.bricks.countActive()==0){
             this.showWin();
@@ -104,5 +105,7 @@ export class Game extends Phaser.Scene{
      showGameOver(){
         this.scene.start("gameOver");
     }
+
+  
 
 }

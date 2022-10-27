@@ -1,6 +1,7 @@
 import { Game } from "./game";
 import{GameOver} from "./gameOver";
 import{Win} from "./win";
+import{Menu} from "./menu";
 
 import Phaser from "phaser";
 
@@ -11,7 +12,7 @@ function App(){
     type: Phaser.AUTO,
     width: 650,
     height: 692,
-    scene:[Game,GameOver,Win],
+    scene:[Menu,Game,GameOver,Win],
     
     physics: {
         default: 'arcade',
