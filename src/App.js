@@ -1,23 +1,19 @@
+import Phaser from "phaser";
 import { Game } from "./game";
+import { GameDos } from "./gameDos";
 import{GameOver} from "./gameOver";
 import{Win} from "./win";
 import{Menu} from "./menu";
-
-import Phaser from "phaser";
-
-
 
 function App(){
   var config = {
     type: Phaser.AUTO,
     width: 650,
     height: 692,
-    scene:[Menu,Game,GameOver,Win],
-    
+    scene:[Menu,Game,GameDos,GameOver,Win],    
     physics: {
         default: 'arcade',
         arcade: {
-            gravity:{y:400},
             debug: false
         }
     }

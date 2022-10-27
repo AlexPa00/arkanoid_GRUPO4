@@ -8,7 +8,7 @@ export class ButtonLvl2{
     create(){
         this.startButton=this.relatedScene.add.image(350,550,"buttonlvl2").setInteractive();
         this.startButton.on("pointerdown",()=>{
-            this.relatedScene.scene.start("game");
+            this.relatedScene.scene.start("gameDos");
         });
     }
 }

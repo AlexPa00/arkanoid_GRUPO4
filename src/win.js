@@ -9,11 +9,15 @@ export class Win extends Phaser.Scene{
     preload(){
         this.load.image("winn","images/winn.png");
          this.load.image('backgroundW','images/FondoWin.png');
+
         this.restartButton.preload();
     }
 
     create(){
+
         this.add.image(325,344,"backgroundW");
+
+
        this.restartButton.create();
         this.winImage=this.add.image(330,350,"winn");
     }
