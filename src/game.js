@@ -34,7 +34,7 @@ export class Game extends Phaser.Scene{
 
         this.bricks = this.physics.add.staticGroup({
             key: ['bluewall', 'greenwall', 'goldwall', 'whitewall','lightbluewall','orangewall','pinkwall','redwall','silverwall','yellowwall'], 
-            frameQuantity: 5, // es el número de elementos para cada uno de los grupos
+            frameQuantity: 4, // es el número de elementos para cada uno de los grupos
             gridAlign: { 
               width: 10, //anchura en columnas de la rejilla
               height: 4, //altura en filas de la rejilla
