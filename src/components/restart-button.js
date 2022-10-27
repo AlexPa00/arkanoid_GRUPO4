@@ -8,7 +8,7 @@ export class RestartButton{
     create(){
         this.startButton=this.relatedScene.add.image(325,600,"button").setInteractive();
         this.startButton.on("pointerdown",()=>{
-            this.relatedScene.scene.start("game");
+            this.relatedScene.scene.start("menu");
         });
     }
 }

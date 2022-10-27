@@ -8,11 +8,16 @@ export class GameOver extends Phaser.Scene{
 
     preload(){
         this.load.image("gameOver","images/game-over.png");
+
+        this.load.image('backgroundGO','images/FondoGameOver.png');
+
         this.restartButton.preload();
     }
 
     create(){
-        this.add.image(325,344,"background");
+
+        this.add.image(325,344,"backgroundGO");
+
        this.restartButton.create();
         this.gameOverImage=this.add.image(330,315,"gameOver");
     }
