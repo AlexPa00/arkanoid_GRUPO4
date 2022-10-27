@@ -1,4 +1,4 @@
-import { Game } from "./game";
+import { GameDos } from "./gameDos";
 import Phaser from "phaser";
 import{GameOver} from "./gameOver";
 import{Win} from "./win";
@@ -9,7 +9,7 @@ function App(){
     type: Phaser.AUTO,
     width: 650,
     height: 692,
-    scene:[Game,GameOver,Win],
+    scene:[GameDos,GameOver,Win],
     physics: {
         default: 'arcade',
         arcade: {
