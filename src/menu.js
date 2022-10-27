@@ -9,14 +9,14 @@ export class Menu extends Phaser.Scene{
     }
 
     preload(){
-        this.load.image('background','images/ArkanoidFondo.png');
+        this.load.image('backgroundM','images/FondoMenu.png');
         this.load.image('tittle','images/arkanoid.png');
         this.buttonLvl1.preload();
         this.buttonLvl2.preload();
         }
     create(){
-        this.add.image(325,346,'background');
-        this.add.image(330,200,'tittle');
+        this.add.image(325,346,'backgroundM');
+        this.add.image(325,200,'tittle');
         this.buttonLvl1.create();
         this.buttonLvl2.create();
      

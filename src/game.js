@@ -37,7 +37,7 @@ export class Game extends Phaser.Scene{
             frameQuantity: 5, // es el número de elementos para cada uno de los grupos
             gridAlign: { 
               width: 10, //anchura en columnas de la rejilla
-              height: 5, //altura en filas de la rejilla
+              height: 4, //altura en filas de la rejilla
               cellWidth: 50, //tamaño de la celda de rejilla de anchura
               cellHeight: 25, //altura de la celda de la rejilla
               x: 125, //La posición del primer elemento de la rejilla, en la horizontal
