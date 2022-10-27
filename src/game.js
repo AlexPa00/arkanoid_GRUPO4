@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { ScoreBoards } from "./components/ScoreBoards";
 export class Game extends Phaser.Scene{
     constructor(){
         super({key:'game'});    
