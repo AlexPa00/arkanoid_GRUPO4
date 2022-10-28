@@ -7,6 +7,7 @@ export class Win extends Phaser.Scene{
     }
 
     preload(){
+        this.load.audio('winner', 'sounds/tadda.ogg');
         this.load.image("winn","images/winn.png");
          this.load.image('backgroundW','images/FondoWin.png');
 
@@ -15,6 +16,7 @@ export class Win extends Phaser.Scene{
 
     create(){
 
+        this.winners = this.sound.add('winn');
         this.add.image(325,344,"backgroundW");
 
 

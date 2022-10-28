@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { ScoreBoards } from "./components/ScoreBoards";
+
 export class Game extends Phaser.Scene{
     constructor(){
         super({key:'game'});        
@@ -7,6 +8,8 @@ export class Game extends Phaser.Scene{
 
     init()  {
         this.scoreBoard = new ScoreBoards(this);
+
+
     }
 
 
@@ -25,6 +28,7 @@ export class Game extends Phaser.Scene{
             this.load.image('silverwall', 'images/SilverWall.png');
             this.load.image('whitewall', 'images/WhiteWall.png');
             this.load.image('yellowwall', 'images/YellowWall.png');
+    
 
 
 
@@ -34,6 +38,8 @@ export class Game extends Phaser.Scene{
         this.load.audio('gameoversample', 'sounds/gameover.ogg');
         this.load.audio('winsample', 'sounds/you_win.ogg');
         this.load.audio('startgamesample', 'sounds/start-game.ogg');
+        this.load.audio('ambiente', 'sounds/Ambiente.ogg');
+
         
 
         }
@@ -50,13 +56,15 @@ export class Game extends Phaser.Scene{
         this.scoreBoard.create();
         this.brickImpactSample = this.sound.add('brickimpactsample');
         this.platformImpactSample = this.sound.add('platformimpactsample');
+        this.ambientes = this.sound.add('ambiente');
+        
 
 
     
 
         this.bricks = this.physics.add.staticGroup({
             key: ['bluewall', 'greenwall', 'goldwall', 'whitewall','lightbluewall','orangewall','pinkwall','redwall','silverwall','yellowwall'], 
-            frameQuantity: 4, // es el número de elementos para cada uno de los grupos
+            frameQuantity: 1, // es el número de elementos para cada uno de los grupos
             gridAlign: { 
               width: 10, //anchura en columnas de la rejilla
               height: 5, //altura en filas de la rejilla
@@ -74,6 +82,9 @@ export class Game extends Phaser.Scene{
         this.ball.setBounce(1,1);
         this.ball.setCollideWorldBounds(true);
         this.ball.setData('glue', true);
+        this.ambientes.play();
+        this.ambientes.volume = 0.50;
+
         
     //  
 

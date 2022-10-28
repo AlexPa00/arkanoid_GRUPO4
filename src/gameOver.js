@@ -6,7 +6,10 @@ export class GameOver extends Phaser.Scene{
         this.restartButton= new RestartButton(this);      
     }
 
+
     preload(){
+        this.load.audio('faill', 'sounds/fail.ogg');
+
         this.load.image("gameOver","images/game-over.png");
 
         this.load.image('backgroundGO','images/FondoGameOver.png');
@@ -15,9 +18,10 @@ export class GameOver extends Phaser.Scene{
     }
 
     create(){
+        this.failed = this.sound.add('faill');
 
         this.add.image(325,344,"backgroundGO");
-
+        this.failed.play();
        this.restartButton.create();
         this.gameOverImage=this.add.image(330,315,"gameOver");
     }
