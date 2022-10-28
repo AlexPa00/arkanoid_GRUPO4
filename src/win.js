@@ -15,12 +15,11 @@ export class Win extends Phaser.Scene{
     }
 
     create(){
-
-        this.winners = this.sound.add('winn');
+       //this.win = this.sound.add('winner');
         this.add.image(325,344,"backgroundW");
 
-
-       this.restartButton.create();
+        //this.win.play();
+        this.restartButton.create();
         this.winImage=this.add.image(330,350,"winn");
     }
 }

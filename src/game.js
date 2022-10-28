@@ -150,6 +150,7 @@ export class Game extends Phaser.Scene{
 
         if (this.ball.y>700 & this.ball.active){
             console.log("fin");
+            this.ambientes.stop();
             this.showGameOver();
         }
         if (this.cursors.space.isDown) {
